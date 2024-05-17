@@ -34,40 +34,36 @@ mamba activate environment
 
 The default settings are as follows:
 ```
-python scripts/detect.py --model_name yolov8s.pt --folder_path data/input --save_detections False --confidence 0.1
 python scripts/detect.py
+#OR
+python scripts/detect.py --model_name yolov8s.pt --folder_path data/input --save_detections False --confidence 0.1
 ```
 
 ### Folder structure
 
-Raw images are saved within `data/input`
-detection results are saved in detections.csv
+Save your raw images are saved within `data/input` for the detection task. Detection results are saved in `data/output/detections.csv`
 
 ### Models
 
-YOLOv8n is the smallest model size
-YOLOv8x is the largest model size available for YOLOv8.
+YOLOv8n is the smallest model size of only 6MB. It should be able to run on consumer-level GPUs.
 
 ### Training data
 
-The dataset used for training the models here were part of the Ecoflow[https://github.com/microsoft/Ecoflow] dataset.
-1000 images per species
-
-The species included in the training dataset are as follows:
-  0: Brown Bandicoot
-  1: Red-necked Wallaby
-  2: Brushtail Possum
-  3: Cat
-  4: Red Fox
-  5: Rabbit Hare
-  6: Dog
-  7: Eastern Grey Kangaroo
-  8: Echidna
-  9: Pig
-  10: Euro
-  11: Fallow Deer
-  12: Long-nosed Bandicoot
-  13: Koala
+The dataset used for training the models here were part of the Ecoflow[https://github.com/microsoft/Ecoflow] dataset. From the 26 classes, I extracted 1000 random images from 14 of those classes for model training. The species included in the training dataset are as follows: <br />
+  0: Brown Bandicoot <br />
+  1: Red-necked Wallaby <br />
+  2: Brushtail Possum <br />
+  3: Cat <br />
+  4: Red Fox <br />
+  5: Rabbit Hare <br />
+  6: Dog (or Dingo) <br />
+  7: Eastern Grey Kangaroo <br />
+  8: Echidna <br />
+  9: Pig <br />
+  10: Euro <br />
+  11: Fallow Deer <br />
+  12: Long-nosed Bandicoot <br />
+  13: Koala <br />
 
 ## Contributing
 If you have any suggestions, please create a new issue and I will respond when I have some free time.
