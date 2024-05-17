@@ -15,8 +15,8 @@ mkdir c:\git
 cd c:\git
 git clone https://github.com/jesstytam/yolo_model_zoo
 cd c:\git\yolo_model_zoo
-mamba env create --file envs\environment.yml
-mamba activate 
+mamba create -n yolov8 -f environment.yml
+mamba activate  yolov8
 ```
 
 ### MacOS & Linux
@@ -26,8 +26,8 @@ mkdir git
 cd git
 git clone https://github.com/jesstytam/yolo_model_zoo
 cd yolo_model_zoo
-mamba env create --file==environment.yml
-mamba activate environment
+mamba create -n yolov8 -f environment.yml
+mamba activate yolov8
 ```
 
 ## Run model
