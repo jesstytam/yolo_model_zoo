@@ -1,9 +1,12 @@
 # YOLO model zoo
-This is a (test) repo to run pre-trained YOLOv8 detection models. I recommend running the MegaDetector to remove non-animal images before running a finer-grained classification model, such as the ones here.
+
+The purpose of this repository is to test pre-trained YOLOv8 models on a folder of images with minimal hyperparameter tuning. As such, feel free to modify `scripts/detect.py` and the folder structure to your liking, or add new models to the `model_zoo` folder when inferencing. Only YOLOv8 models are supported due to the slight changes in model architecture from YOLOv5. YOLOv9 models have not been tested yet.
+
+In a real-world scenatio, please run the MegaDetector to remove all non-animal images before running a finer-grained detection and classification model, such as the ones here. YOLO models also work on video clips.
 
 ## Installation
 
-Install Mamba Miniforge according to the instructions here[https://github.com/conda-forge/miniforge?tab=readme-ov-file#download]. This is essential for managing the packages required by this repository and their updates. Afterwards, you can follow the steps below to install and run `yolo_model_zoo`.
+Install Mamba Miniforge according to the instructions here[https://github.com/conda-forge/miniforge?tab=readme-ov-file#download]. This is essential for managing the packages required by this repository and their updates. Alternatively, you can also use your personal choice of package manager, e.g. Anaconda. Afterwards, you can follow the steps below to install and run `yolo_model_zoo`.
 
 ### Windows
 
@@ -29,9 +32,42 @@ mamba activate environment
 
 ## Run model
 
+The default settings are as follows:
+```
+python scripts/detect.py --model_name yolov8s.pt --folder_path data/input --save_detections False --confidence 0.1
+python scripts/detect.py
+```
+
 ### Folder structure
+
+Raw images are saved within `data/input`
+detection results are saved in detections.csv
 
 ### Models
 
+YOLOv8n is the smallest model size
+YOLOv8x is the largest model size available for YOLOv8.
+
 ### Training data
 
+The dataset used for training the models here were part of the Ecoflow[https://github.com/microsoft/Ecoflow] dataset.
+1000 images per species
+
+The species included in the training dataset are as follows:
+  0: Brown Bandicoot
+  1: Red-necked Wallaby
+  2: Brushtail Possum
+  3: Cat
+  4: Red Fox
+  5: Rabbit Hare
+  6: Dog
+  7: Eastern Grey Kangaroo
+  8: Echidna
+  9: Pig
+  10: Euro
+  11: Fallow Deer
+  12: Long-nosed Bandicoot
+  13: Koala
+
+## Contributing
+If you have any suggestions, please create a new issue and I will respond when I have some free time.
