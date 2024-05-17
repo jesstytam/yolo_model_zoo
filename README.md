@@ -1,10 +1,10 @@
-# YOLO model zoo
+# :paw_prints: YOLO model zoo :paw_prints:
 
 The purpose of this repository is to test pre-trained YOLOv8 models on a folder of images with minimal hyperparameter tuning. As such, feel free to modify `scripts/detect.py` and the folder structure to your liking, or add new models to the `model_zoo` folder when inferencing. Only YOLOv8 models are supported due to the slight changes in model architecture from YOLOv5. YOLOv9 models have not been tested yet.
 
 In a real-world scenatio, please run the MegaDetector to remove all non-animal images before running a finer-grained detection and classification model, such as the ones here. YOLO models also work on video clips.
 
-## Installation
+## :axe: Installation
 
 Install Mamba Miniforge according to the instructions [here](https://github.com/conda-forge/miniforge?tab=readme-ov-file#download). This is essential for managing the packages required by this repository and their updates. Alternatively, you can also use your personal choice of package manager, e.g. Anaconda. Afterwards, you can follow the steps below to install and run `yolo_model_zoo`.
 
@@ -30,7 +30,7 @@ mamba create -n yolov8 -f environment.yml
 mamba activate yolov8
 ```
 
-## Run model
+## :fondue: Run model
 
 The default settings are as follows:
 ```
@@ -66,5 +66,5 @@ The dataset used for training the models here were part of the [Ecoflow](https:/
   12: Long-nosed Bandicoot <br />
   13: Koala <br />
 
-## Contributing
+## :climbing_man: Contributing
 If you have any suggestions, please create a new issue and I will respond when I have some free time.
