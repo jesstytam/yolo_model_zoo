@@ -8,7 +8,7 @@ import pandas as pd
 parser = argparse.ArgumentParser(description='Run inference on a folder of images.')
 parser.add_argument(
     '--model_name',
-    default='yolov8s.pt'
+    default='yolov8s.pt',
     type=str,
     required=False,
     help='Path to the detector file.'
