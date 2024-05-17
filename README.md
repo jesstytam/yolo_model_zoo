@@ -6,7 +6,7 @@ In a real-world scenatio, please run the MegaDetector to remove all non-animal i
 
 ## Installation
 
-Install Mamba Miniforge according to the instructions here[https://github.com/conda-forge/miniforge?tab=readme-ov-file#download]. This is essential for managing the packages required by this repository and their updates. Alternatively, you can also use your personal choice of package manager, e.g. Anaconda. Afterwards, you can follow the steps below to install and run `yolo_model_zoo`.
+Install Mamba Miniforge according to the instructions [here](https://github.com/conda-forge/miniforge?tab=readme-ov-file#download). This is essential for managing the packages required by this repository and their updates. Alternatively, you can also use your personal choice of package manager, e.g. Anaconda. Afterwards, you can follow the steps below to install and run `yolo_model_zoo`.
 
 ### Windows
 
@@ -49,7 +49,8 @@ YOLOv8n is the smallest model size of only 6MB. It should be able to run on cons
 
 ### Training data
 
-The dataset used for training the models here were part of the Ecoflow[https://github.com/microsoft/Ecoflow] dataset. From the 26 classes, I extracted 1000 random images from 14 of those classes for model training. The species included in the training dataset are as follows: <br />
+The dataset used for training the models here were part of the [Ecoflow](https://github.com/microsoft/Ecoflow) dataset. From the 26 classes, I extracted 1000 random images from 14 of those classes for model training. The species included in the training dataset are as follows: <br />
+
   0: Brown Bandicoot <br />
   1: Red-necked Wallaby <br />
   2: Brushtail Possum <br />
