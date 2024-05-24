@@ -23,7 +23,7 @@ parser.add_argument(
 parser.add_argument(
     '--save_detections',
     default=False,
-    type=float,
+    type=bool,
     required=False,
     help='To save the detections with images or not.'
 )

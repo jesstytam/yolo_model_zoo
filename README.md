@@ -14,9 +14,11 @@ Install Mamba Miniforge according to the instructions [here](https://github.com/
 mkdir c:\git
 cd c:\git
 git clone https://github.com/jesstytam/yolo_model_zoo
-cd c:\git\yolo_model_zoo
-mamba create -n yolov8 -f environment.yml
+cd yolo_model_zoo
+mkdir data\output
+mamba create -n yolov8 python=3.10
 mamba activate  yolov8
+pip install ultralytics
 ```
 
 ### MacOS & Linux
@@ -26,8 +28,10 @@ mkdir git
 cd git
 git clone https://github.com/jesstytam/yolo_model_zoo
 cd yolo_model_zoo
-mamba create -n yolov8 -f environment.yml
+mkdir data/output
+mamba create -n yolov8 python=3.10
 mamba activate yolov8
+pip install ultralytics
 ```
 
 ## :fondue: Run model
