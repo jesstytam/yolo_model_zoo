@@ -6,7 +6,7 @@ In a real-world scenatio, please run the MegaDetector to remove all non-animal i
 
 ## :axe: Installation
 
-Install Mamba Miniforge according to the instructions [here](https://github.com/conda-forge/miniforge?tab=readme-ov-file#download). This is essential for managing the packages required by this repository and their updates. Alternatively, you can also use your personal choice of package manager, e.g. Anaconda. Afterwards, you can follow the steps below to install and run `yolo_model_zoo`.
+Install Mamba Miniforge according to the instructions [here](https://github.com/conda-forge/miniforge?tab=readme-ov-file#download), and then open `Miniforge Prompt`. This is essential for managing the packages required by this repository and their updates. Alternatively, you can also use your personal choice of package manager, e.g. Anaconda. Afterwards, you can follow the steps below to install and run `yolo_model_zoo`.
 
 ### Windows
 
