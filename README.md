@@ -10,10 +10,14 @@ Install Git [here](https://www.git-scm.com/downloads) and Mamba Miniforge accord
 
 ### Windows
 
+Navigate to a folder where you would like to have this repository saved and download it:
 ```
 mkdir c:\git
 cd c:\git
 git clone https://github.com/jesstytam/yolo_model_zoo
+```
+Navigate into the repository's folder to create an environnent and install the YOLO package:
+```
 cd yolo_model_zoo
 mkdir data\output
 mamba create -n yolov8 python=3.10
@@ -23,13 +27,17 @@ pip install ultralytics
 
 ### MacOS & Linux
 
+Navigate to a folder where you would like to have this repository saved and download it:
 ```
 mkdir git
 cd git
 git clone https://github.com/jesstytam/yolo_model_zoo
+```
+Navigate into the repository's folder to create an environnent and install the YOLO package:
+```
 cd yolo_model_zoo
-mkdir data/output
-mamba create -n yolov8 python=3.10
+mkdir data/output #creates a folder to store your results
+mamba create -n yolov8 python=3.10 #creates environment to store your packages
 mamba activate yolov8
 pip install ultralytics
 ```
@@ -39,7 +47,7 @@ pip install ultralytics
 The default settings are as follows:
 ```
 python scripts/detect.py
-#OR
+#OR (these 2 lines are the same)
 python scripts/detect.py --model_name yolov8s.pt --folder_path data/input --save_detections False --confidence 0.1
 ```
 
