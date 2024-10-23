@@ -36,8 +36,8 @@ git clone https://github.com/jesstytam/yolo_model_zoo
 Navigate into the repository's folder to create an environnent and install the YOLO package:
 ```
 cd yolo_model_zoo
-mkdir data/output #creates a folder to store your results
-mamba create -n yolov8 python=3.10 #creates environment to store your packages
+mkdir data/output
+mamba create -n yolov8 python=3.10 
 mamba activate yolov8
 pip install ultralytics
 ```
@@ -50,6 +50,7 @@ python scripts/detect.py
 #OR (these 2 lines are the same)
 python scripts/detect.py --model_name yolov8s.pt --folder_path data/input --save_detections False --confidence 0.1
 ```
+The default setting calls YOLOv8 small model and saves the detection results (images with bounding boxes). However, it sets the confidence to `0.1` which is rather low. Fiddle around with these settings until you are happy wth your predictions.
 
 ### Folder structure
 
