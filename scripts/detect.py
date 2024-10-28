@@ -3,6 +3,7 @@ from ultralytics import YOLO
 import torch
 import os
 import pandas as pd
+import time
 
 #setup argparse
 parser = argparse.ArgumentParser(description='Run inference on a folder of images.')
@@ -77,8 +78,9 @@ for image in os.listdir(parent_dir):
     run_inference(parent_path=image_path)
 
 #save detections to a single CSV file
+timestamp = time.strftime("%Y%m%d_%H%M%S")
 if all_detections:
     final_df = pd.concat(all_detections)
-    final_df.to_csv(f'data/output/detections.csv', index=False)
+    final_df.to_csv(f'data/output/detections_{timestamp}.csv', index=False)
 else:
     print("No detections were made.")
