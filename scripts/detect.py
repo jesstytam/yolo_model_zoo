@@ -63,7 +63,7 @@ def run_inference(parent_path):
             cat = int(box.cls[0])
             path = result.path
             class_name = model.names[cat]
-            conf = int(box.conf[0])
+            conf = float(box.conf[0])
             bbox = box.xywh.tolist()
             df = pd.DataFrame({'path': path,
                                'class_name': class_name,
