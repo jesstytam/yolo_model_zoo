@@ -48,7 +48,7 @@ The default settings are as follows:
 ```
 python scripts/detect.py
 #OR (these 2 lines are the same)
-python scripts/detect.py --model_name yolov8s.pt --folder_path data/input --save_detections False --confidence 0.1
+python scripts/detect.py --model_name best.pt --folder_path data/input --save_detections False --confidence 0.1
 ```
 The default setting calls YOLOv8 small model and saves the detection results (images with bounding boxes). However, it sets the confidence to `0.1` which is rather low. Fiddle around with these settings until you are happy wth your predictions.
 
